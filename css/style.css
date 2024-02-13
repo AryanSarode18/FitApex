@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --prime: #00ff34;
+}
+
+body {
+    background-color: #131b2b;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 30px 120px;
+    background: transparent;
+    justify-content: space-between;
+    z-index: 1111;
+    transition: 0.5s ease;
+}
+
+.navbar.sticky {
+    padding: 6px 60px;
+    background: #0c1518;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.sticky .logo {
+    font-size: 2em;
+    color: var(--prime);
+}
+
+.navbar.sticky .logo b {
+    color: #fff;
+}
+
+
+.logo {
+    font-size: 2.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo B {
+    color: var(--prime);
+}
+
+ol {
+    display: flex;
+    margin: auto 0;
+}
+
+ol li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+ol li a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff !important;
+}
+
+ol li:hover a {
+    color: var(--prime) !important;
+}
+
+.view {
+    width: 100%;
+    position: relative;
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%, 0 100%);
+}
+
+.highlights {
+    position: relative;
+    z-index: 11;
+    width: 70%;
+}
+
+.highlights h3 {
+    display: inline;
+    font-size: 2vw;
+    padding: 5px 20px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-left: 6px solid var(--prime);
+}
+
+.highlights h1 {
+    font-size: 9vw;
+    text-align: center;
+    font-weight: normal;
+}
+
+.highlights b {
+    color: var(--prime);
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.highlights .tagline {
+    color: #d7d7d7;
+    font-size: 1.2vw;
+    text-align: center;
+    font-weight: normal;
+}
+
+.highlights .join {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    padding: 5px 20px;
+    margin-top: 1.2em;
+    color: var(--prime);
+    border: 2px solid var(--prime);
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    font-size: 1.8vw;
+    text-decoration: none;
+
+}
+
+.highlights .join:hover {
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    background: var(--prime);
+}
+
+.main {
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 2.5vw;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+}
+
+.main h2 span {
+    color: var(--prime);
+}
+
+.main h1:before {
+    position: absolute;
+    content: '';
+    background: var(--prime);
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+}
+
+.main h6 {
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: center;
+}
+
+#more {
+    display: none;
+}
+
+.extra {
+    color: #fff;
+}
+
+.about .content .cols {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+}
+
+.about .content .cols p b {
+    font-size: 20px;
+}
+
+.about .content .cols a {
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    color: var(--prime);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.about .content .cols a:hover {
+    color: #fff;
+    background: var(--prime);
+}
+
+.about .content .cols .box {
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about .content .cols .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.plans .content {
+    flex-wrap: wrap;
+}
+
+.plans .content .frame {
+    position: relative;
+    width: 300px;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    background: #222;
+}
+
+.plans .content .frame .headline {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.plans .content .frame .headline .title {
+    color: var(--prime);
+    font-size: 1.2em;
+}
+
+.plans .content .frame .headline .price {
+    font-size: 1.2em;
+    padding-bottom: 18px;
+}
+
+.plans .content .frame .details {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.plans .content .frame .details i {
+    font-size: 1.1em;
+    margin-right: 20px;
+    Line-height: 22px;
+}
+
+.plans .content .frame .details p {
+    font-size: 0.9em;
+    position: relative;
+    padding-bottom: 12px;
+    display: table;
+}
+
+.plans .content .frame .details p::before {
+    content: '\f058';
+    font-family: 'FontAwesome';
+    font-size: 1.1em;
+    margin-right: 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.plans .content .frame .button button {
+    top: 20px;
+    color: var(--prime);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.plans .content .frame .button {
+    display: flex;
+    justify-content: center;
+}
+
+.plans .content .frame button:hover {
+    color: #fff;
+    background: var(--prime);
+}
+
+.workout .content {
+    flex-wrap: wrap;
+}
+
+.workout .content .frame {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    background: #222;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.workout .content .frame .box {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.workout .content .frame .box img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 0.2s ease-in;
+}
+
+.workout .content .frame .box:hover img {
+    filter: brightness(100%);
+    transform: scale(1.08);
+}
+
+.workout .content .frame .title {
+    color: var(--prime);
+    padding: 5px 0;
+}
+
+.workout .content .frame p {
+    font-size: 0.8em;
+}
+
+.trainers .content {
+    flex-wrap: wrap;
+}
+
+.detailed-info {
+    margin-top: 5px;
+}
+
+.trainers .content .frame {
+    position: relative;
+    width: 500px;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    background: #222;
+}
+
+.trainers .content .frame .box {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trainers .content .frame .box img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: 0.2s ease-in;
+}
+
+.trainers .content .frame .box:hover img {
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+
+.trainers .content .frame .headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.trainers .content .frame .headline .com {
+    text-decoration: none;
+}
+
+.trainers .content .frame .headline .com i {
+    height: 22px;
+    width: 22px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    Line-height: 22px;
+}
+
+.trainers .content .frame .headline .com i:hover {
+    border: 1.5px solid var(--prime);
+    background: var(--prime);
+}
+
+.trainers .content .frame .headline .title {
+    color: var(--prime);
+    font-size: 1.2em;
+}
+
+.trainers .content .frame p {
+    font-size: 0.8em;
+    position: relative;
+    bottom: 5px;
+}
+
+.trainers .content .frame .explore-btn {
+    top: 20px;
+    color: var(--prime);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.trainers .content .frame .explore-btn:hover {
+    color: #fff;
+    background: var(--prime);
+}
+
+.diet .content {
+    flex-direction: column;
+}
+
+.diet .content .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.diet .content .row:nth-child(odd) .a {
+    order: 2;
+}
+
+.diet .content .row .cols {
+    position: relative;
+    width: 600px;
+    padding: 20px 50px;
+}
+
+.diet .content .row .cols .heading {
+    font-size: 2em;
+    color: #ff8502;
+    text-transform: capitalize;
+}
+
+.diet .content .row:nth-child(odd) .cols .heading {
+    color: #02a3ff;
+}
+
+.diet .content .row .cols .boxes {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.diet .content .row .cols .boxes img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact .info {
+    padding-top: 140px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 80px;
+    font-size: 20px;
+}
+
+.contact .info div i {
+    padding-right: 20px;
+}
+
+.contact .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 200px 30px 0px;
+    width: 800px;
+    margin-left: auto;
+}
+
+.contact .content form {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contact .content form .inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contact .content form input {
+    color: #222;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.contact .content form textarea {
+    width: 100%;
+    padding: 10px;
+    color: #222;
+    font-size: 18px;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    margin-top: 15px;
+    background: transparent;
+}
+
+.contact .content form input:focus,
+.contact .content form textarea:focus {
+    border: 2px solid var(--prime);
+    transition: 0.1s ease;
+}
+
+.contact .content form .btn {
+    display: block;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100px;
+    color: var(--prime);
+    border-color: var(--prime);
+    cursor: pointer;
+    transition: 0.2s ease;
+    float: right;
+}
+
+.contact .content form .btn:hover {
+    color: #fff;
+    background: var(--prime);
+}
+
+.copyright {
+    text-transform: capitalize;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    background: #222;
+    text-align: center;
+    font-size: 18px;
+}
+
+.copyright a {
+    color: var(--prime);
+    text-decoration: none;
+    margin: 0 2px;
+    font-weight: lighter;
+}
+
+.health-tips {
+    background-color: #131b2b;
+}
+
+.health-tips .main h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.health-tips .main h6 {
+    font-size: 18px;
+    color: #d7d7d7;
+    margin-top: 10px;
+}
+
+.health-tips .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.health-tips .tip {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.health-tips .tip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.health-tips .tip img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.health-tips .tip h3 {
+    font-size: 20px;
+    color: var(--prime);
+    margin: 10px 0;
+}
+
+.health-tips .tip p {
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.info>:nth-child(2) a {
+    text-decoration: none;
+}
+
+.payment-container {
+    position: fixed;
+    width: 80vw;
+    height: 650px;
+    background-color: #070707;
+    border-radius: 25px;
+    top: -100%;
+    left: -100%;
+    transition: top 500ms ease;
+}
+
+.top-line {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-line h2 {
+    font-size: 2em;
+    padding: 15px;
+}
+
+.top-line img {
+    filter: invert(1);
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+}
+
+.payment-form {
+    padding: 30px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #58a6ff;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.payment-form button {
+    padding: 10px 20px;
+    background-color: #58a6ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms;
+    font-size: 0.8em;
+}
+
+.payment-form button:hover {
+    filter: invert(1);
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0 60px;
+    }
+
+    .navbar ol {
+        display: none;
+    }
+
+    .navbar ol.active {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background: #222;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 60px);
+    }
+
+    .navbar ol.active li {
+        margin: 8px;
+    }
+
+    .navbar ol.active li a {
+
+        font-size: 25px;
+    }
+
+    .navbar .toggle {
+        height: 25px;
+        width: 25px;
+        margin: auto 0;
+        cursor: pointer;
+        background: url(../img/menubar.jpg);
+        background-size: 25px;
+        background-position: center;
+        filter: invert(1);
+        background-repeat: no-repeat;
+    }
+
+    .navbar .toggle.active {
+        background: url(../img/close.png);
+        background-size: 40px;
+        background-position: center;
+        cursor: pointer;
+        filter: invert(1);
+    }
+
+    .highlights h3 {
+        font-size: 3vw;
+        padding: 5px 10px;
+        border-left: 3px solid var(--prime);
+    }
+
+    .highlights h1 {
+        font-size: 16vw;
+    }
+
+    .main h2 {
+        font-size: 1.5rem;
+    }
+
+    .main h6 {
+        font-size: 10px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .workout .content .frame {
+        width: 260px;
+        padding: 18px;
+    }
+
+    .trainers .content .frame {
+        width: 350px;
+        padding: 15px 15px 40px 15px;
+        margin: 10px 5px;
+    }
+
+    .trainers .content .frame .box {
+        height: 200px;
+    }
+
+    .trainers .content .frame a {
+        border: 1.5px solid var(--prime);
+        padding: 3px 15px;
+    }
+
+    .diet .content .row {
+        flex-direction: column;
+    }
+
+    .diet .content .row .cols {
+        width: 100%;
+    }
+
+    .diet .content .row:nth-child(odd) .a {
+        order: 0;
+    }
+
+    .diet .content .row .cols .heading {
+        font-size: 1.5em;
+    }
+
+    .diet .content .row .cols p {
+        font-size: 13px;
+    }
+
+    .diet .content .row .cols .boxes {
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact .info {
+        align-items: center;
+    }
+
+    .contact .content {
+        padding: 0 20vw;
+    }
+
+    .payment-container {
+        width: 100vw;
+        height: 150vh;
+        border-radius: 0;
+        top: 0;
+        padding: 0;
+        left: 0;
+        display: none;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .container {
+        background-color: transparent;
+        opacity: 1;
+    }
+}
